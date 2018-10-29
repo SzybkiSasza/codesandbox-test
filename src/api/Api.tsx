@@ -10,9 +10,8 @@ const promiseDelay = () => {
 
 /**
  * This function is deliberately kept simple, without error handling, just as a POC
- * I had to add skipDelay for tests, as CodeSandbox does not support Jest Timers
  */
-export const fetchItems = async (skipDelay = false): Promise<ApiItem[]> => {
+export const fetchItems = async (): Promise<ApiItem[]> => {
   await promiseDelay();
 
   const response = await fetch('data.json', {

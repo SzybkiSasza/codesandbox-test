@@ -36,6 +36,8 @@ I pesonally think that introducing Redux part-by-part to any existing app is not
 
 imports, index simpler, but Intellisense etc.
 
+## JSX/Typescript rules
+
 ## Future considerations
 
 - Webpack (or any other bundler)

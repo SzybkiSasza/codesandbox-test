@@ -7,7 +7,7 @@ import './PagerItem.css';
 export const PagerItem = (props: { data: ApiItem }) => (
   <article className="pager-item">
     <div className="pager-item__id">
-      <svg viewBox="0 0 250 25">
+      <svg viewBox="0 0 400 25">
         <text x="0" y="20">
           {props.data._id}
         </text>

@@ -7,18 +7,22 @@ import './PaginationItem.css';
 /**
  * Helper to prepare class for item
  */
-const getItemClass = (pageNumber?: number) =>
-  'pagination-item__button' +
-  (typeof pageNumber !== 'number' ? ' pagination-item__button--disabled' : '');
+const getItemClass = function(pageNumber?: number) {
+  return 'pagination-item__button' +
+    (typeof pageNumber !== 'number' ? ' pagination-item__button--disabled' : '');
+};
+
 
 /**
  * Checks click conditions and runs click handler, if possible
  */
-const handleClick = (
+const handleClick = function(
   evt: React.MouseEvent,
   pageNumber?: number,
   onClick?: PaginationItemProps['onClick'],
-) => typeof pageNumber === 'number' && onClick && onClick(pageNumber, evt);
+) {
+  typeof pageNumber === 'number' && onClick && onClick(pageNumber, evt);
+};
 
 /**
  * I preferred to separate this into standalone component, to save on repeated code in Pagination
