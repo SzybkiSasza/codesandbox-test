@@ -4,7 +4,7 @@ const [MIN_TIME, MAX_TIME] = [1000, 5000];
 
 // Small helper to delay loading items just a bit
 const promiseDelay = () => {
-  const promiseTime = Math.floor(Math.random() * (MAX_TIME - MIN_TIME));
+  const promiseTime = Math.floor(Math.random() * (MAX_TIME - MIN_TIME) + MIN_TIME);
   return new Promise(resolve => setTimeout(() => resolve(), promiseTime));
 };
 
