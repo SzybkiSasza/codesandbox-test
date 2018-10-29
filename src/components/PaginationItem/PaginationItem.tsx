@@ -8,10 +8,11 @@ import './PaginationItem.css';
  * Helper to prepare class for item
  */
 const getItemClass = function(pageNumber?: number) {
-  return 'pagination-item__button' +
-    (typeof pageNumber !== 'number' ? ' pagination-item__button--disabled' : '');
+  return (
+    'pagination-item__button' +
+    (typeof pageNumber !== 'number' ? ' pagination-item__button--disabled' : '')
+  );
 };
-
 
 /**
  * Checks click conditions and runs click handler, if possible

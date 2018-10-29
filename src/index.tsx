@@ -5,10 +5,8 @@ import { Pager } from './components/Pager/Pager';
 
 import './index.css';
 
-export const App = () => (
-  <div className="app">
-    <Pager itemsPerPage={3} />
-  </div>
+const App = () => (
+  <Pager itemsPerPage={3} />
 );
 
 render(<App />, document.getElementById('root'));
