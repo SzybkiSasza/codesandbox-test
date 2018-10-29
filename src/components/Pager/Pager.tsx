@@ -50,7 +50,7 @@ export class Pager extends React.Component<PagerPropsType, PagerStateType> {
     }
   }
 
-  selectPageItems(items: ApiItemType[]) {
+  selectPageItems(items: ApiItemType[] = []) {
     const startingIndex = this.state.currentPage * this.props.itemsPerPage;
 
     let lastIndex = startingIndex + this.props.itemsPerPage;
