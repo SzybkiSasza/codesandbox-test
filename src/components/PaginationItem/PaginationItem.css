@@ -1,0 +1,26 @@
+.pagination-item {
+  height: 100%;
+  display: flex;
+}
+.pagination-item:not(:last-child) {
+  border-right: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+.pagination-item__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.pagination-item__button--disabled {
+  opacity: 0.3;
+  cursor: text;
+}
+
+.pagination-item__button:not(.pagination-item__button--disabled):hover {
+  background-color: rgba(100, 100, 100, 0.1);
+}
