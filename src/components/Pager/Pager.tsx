@@ -6,13 +6,13 @@ import { PagerItem } from '../PagerItem/PagerItem';
 import { Pagination } from '../Pagination/Pagination';
 import { Spinner } from '../Spinner/Spinner';
 
-import { PagerProps } from './PagerProps';
-import { PagerState } from './PagerState';
+import { PagerPropsType } from './PagerPropsType';
+import { PagerStateType } from './PagerStateType';
 
 import './Pager.css';
 
-export class Pager extends React.Component<PagerProps, PagerState> {
-  constructor(props: PagerProps) {
+export class Pager extends React.Component<PagerPropsType, PagerStateType> {
+  constructor(props: PagerPropsType) {
     super(props);
 
     this.state = {

@@ -1,6 +1,6 @@
 import { ApiItemType } from '../../api/ApiItemType';
 
-export type PagerState = {
+export type PagerStateType = {
   currentPage: number;
   items: ApiItemType[];
   loading: boolean;
