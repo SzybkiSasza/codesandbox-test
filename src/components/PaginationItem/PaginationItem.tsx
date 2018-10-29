@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { PaginationItemProps } from './PaginationItemProps';
+import { PaginationItemPropsType } from './PaginationItemPropsType';
 
 import './PaginationItem.css';
 
@@ -20,7 +20,7 @@ const getItemClass = function(pageNumber?: number) {
 const handleClick = function(
   evt: React.MouseEvent,
   pageNumber?: number,
-  onClick?: PaginationItemProps['onClick'],
+  onClick?: PaginationItemPropsType['onClick'],
 ) {
   typeof pageNumber === 'number' && onClick && onClick(pageNumber, evt);
 };
@@ -29,7 +29,7 @@ const handleClick = function(
  * I preferred to separate this into standalone component, to save on repeated code in Pagination
  * Simple as it is - styling + event processing
  */
-export const PaginationItem = (props: PaginationItemProps) => (
+export const PaginationItem = (props: PaginationItemPropsType) => (
   <li className="pagination-item">
     <a
       className={getItemClass(props.pageNumber)}

@@ -4,7 +4,7 @@ export type Page = {
   uiPageNumber?: number;
 };
 
-export type PaginationData = {
+export type PaginationDataType = {
   chevronLeft: Page;
   moreLeft: Page;
   mainPages: Page[];

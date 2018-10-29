@@ -1,8 +1,8 @@
-import { ApiItem } from '../../api/ApiItem';
+import { ApiItemType } from '../../api/ApiItemType';
 
 export type PagerState = {
   currentPage: number;
-  items: ApiItem[];
+  items: ApiItemType[];
   loading: boolean;
   totalPages: number;
 };

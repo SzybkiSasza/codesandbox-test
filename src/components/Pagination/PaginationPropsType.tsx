@@ -1,4 +1,4 @@
-export type PaginationProps = {
+export type PaginationPropsType = {
   // Current page. Note that we enumerate from 1 (for consistency with display)!!!
   currentPage: number;
 

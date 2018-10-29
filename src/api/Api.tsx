@@ -1,4 +1,4 @@
-import { ApiItem } from './ApiItem';
+import { ApiItemType } from './ApiItemType';
 
 const [MIN_TIME, MAX_TIME] = [1000, 5000];
 
@@ -11,7 +11,7 @@ const promiseDelay = () => {
 /**
  * This function is deliberately kept simple, without error handling, just as a POC
  */
-export const fetchItems = async (): Promise<ApiItem[]> => {
+export const fetchItems = async (): Promise<ApiItemType[]> => {
   await promiseDelay();
 
   const response = await fetch('data.json', {

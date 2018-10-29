@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import { ApiItem } from '../../api/ApiItem';
+import { ApiItemType } from '../../api/ApiItemType';
 
 import './PagerItem.css';
 
-export const PagerItem = (props: { data: ApiItem }) => (
+export const PagerItem = (props: { data: ApiItemType }) => (
   <article className="pager-item">
     <div className="pager-item__id">
       <svg viewBox="0 0 400 25">

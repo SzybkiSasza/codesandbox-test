@@ -2,16 +2,16 @@ import * as React from 'react';
 
 import { PaginationItem } from '../PaginationItem/PaginationItem';
 
-import { Page, PaginationData } from './PaginationData';
-import { PaginationProps } from './PaginationProps';
+import { Page, PaginationDataType } from './PaginationDataType';
+import { PaginationPropsType } from './PaginationPropsType';
 import './Pagination.css';
 
 /**
  * This component is deliberately dumb, as it represents only paging state and allows for changing the state
  * It'd be simpler if it was written as arrow function, but I wanted to add some helper getters :)
  **/
-export class Pagination extends React.Component<PaginationProps, {}> {
-  constructor(props: PaginationProps) {
+export class Pagination extends React.Component<PaginationPropsType, {}> {
+  constructor(props: PaginationPropsType) {
     super(props);
   }
 
@@ -19,7 +19,7 @@ export class Pagination extends React.Component<PaginationProps, {}> {
    * I prefer to keep UI as far from data as possible
    * Hence, I created this helper to prepare data object that can be easily used in render()
    */
-  buildPaginationData(): PaginationData {
+  buildPaginationData(): PaginationDataType {
     const chevronLeft: Page = {
       pageNumber:
         this.props.currentPage > 0 ? this.props.currentPage - 1 : undefined,

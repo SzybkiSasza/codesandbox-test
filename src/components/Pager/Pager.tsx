@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { fetchItems } from '../../api/Api';
-import { ApiItem } from '../../api/ApiItem';
+import { ApiItemType } from '../../api/ApiItemType';
 import { PagerItem } from '../PagerItem/PagerItem';
 import { Pagination } from '../Pagination/Pagination';
 import { Spinner } from '../Spinner/Spinner';
@@ -31,7 +31,7 @@ export class Pager extends React.Component<PagerProps, PagerState> {
 
   async componentDidMount() {
     try {
-      const items: ApiItem[] = await fetchItems();
+      const items: ApiItemType[] = await fetchItems();
 
       const totalPages =
         items && items.length
@@ -50,7 +50,7 @@ export class Pager extends React.Component<PagerProps, PagerState> {
     }
   }
 
-  selectPageItems(items: ApiItem[]) {
+  selectPageItems(items: ApiItemType[]) {
     const startingIndex = this.state.currentPage * this.props.itemsPerPage;
 
     let lastIndex = startingIndex + this.props.itemsPerPage;
